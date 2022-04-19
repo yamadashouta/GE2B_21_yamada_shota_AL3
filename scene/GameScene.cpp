@@ -23,6 +23,16 @@ void GameScene::Initialize() {
 	//3Dモデルの生成
 	model_ = Model::Create();
 
+	// X, Y, Z 軸周りの平行移動を設定
+	worldTransform_.translation_ = {10.0f, 10.0f, 10.0f};
+
+	//X, Y, Z　軸周りの回転数を設定
+	worldTransform_.rotation_ = {XM_PI / 4.0f, XM_PI / 4.0f, 0.0f};
+
+	// X, Y, Z 方向のスケーリングを設定
+	worldTransform_.scale_ = {5.0f, 5.0f, 5.0f};
+
+
 	//ワールドトランスフォームの初期化
 	worldTransform_.Initialize();
 
